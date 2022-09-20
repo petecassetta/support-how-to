@@ -11,10 +11,10 @@ product: Cloud servers
 product_url: cloud-servers
 ---
 
-This document will explain the different Supported Operating Systems, their patching layout, and supported patching methodologies under Dedicate Platform Hosting.
+This document will explain the different Supported Operating Systems, their patching layout, and supported patching methodologies under Rackspace Dedicated Hosting.
 
 ### Introduction
-Applying updates to all software installed on your systems is an important part of protecting against security vulnerabilities, and pro-actively fixing problems which could affect services and uptime before the problem surfaces. 
+Applying updates to all software installed on your systems is an important part of protecting against security vulnerabilities, and proactively fixing problems which could affect services and uptime before problems surface. 
 
 ### OS Options
 On dedicated with Managed or Intensive SLA, there are the following Linux OS options:
@@ -25,7 +25,7 @@ On dedicated with Managed or Intensive SLA, there are the following Linux OS opt
 - Oracle Linux 7 or 8
 - Ubuntu 18.04 LTS or 20.04 LTS
 
-Only 64-bit x86 versions of the above are supported. 32-bit, or non-x86 versions are not available. Not all services are available with all OS choices: for example Managed Storage is not available with Ubuntu. New OS releases go through an internal qualification process, which creates a gap of at least a few months between the OS being released by the vendor, and it being supported at Rackspace.
+Only 64-bit x86 versions of the above are supported. 32-bit and non-x86 versions are not available. Not all services are available with all OS choices: for example Managed Storage is not available with Ubuntu. New OS releases go through an internal qualification process, which creates a gap of at least a few months between the OS being released by the vendor, and it being supported at Rackspace.
 
 ### Channels
 Channels contain a set of packages available to a system. When an update is released by the vendor, it is added to the channel thus making it available to all servers subscribed to that channel. All systems are subscribed to a main channel, and may also have some child channels for additional features.
@@ -59,10 +59,10 @@ AlmaLinux is an Open Source, community owned and governed, forever-free enterpri
 Rocky Linux is an open-source enterprise operating system designed to be 100% bug-for-bug compatible with Red Hat Enterprise Linux®. It is under intensive development by the community. [Rocky Linux]: <https://Rockylinux.org>
 
 Applies to both:
-- Does not have upstream support or vendor escalation available
-- Has different build environments and QA processes for its packages
+- Does not have upstream support or vendor escalation available.
+- Has different build environments and QA processes for its packages.
 - Both will receive updates later than RHEL, since packages can't be built until the source code is made available by Red Hat.
-- Not eligible for hot fixes or other out of band packages provided by Red Hat support
+- Not eligible for hot fixes or other out of band packages provided by Red Hat support.
 - Extended Update Support (EUS) is not available - only latest base release is supported.
 - End of life by their respective vendors will be inline with upstream vendor, Red Hat.
 
@@ -107,8 +107,7 @@ Auter is a Rackspace developed re-implementation of yum-cron, which aims to solv
 
 Who Can Get It? Auter can be installed for any customer running Rackspace supported RHEL or CentOS servers. Currently, Auter does not support Ubuntu. Auter is open source and available in the epel repositories, so it can also be installed on systems outside of Rackspace as well.
 
-#### UnattendedUpgrades
-Ubuntu systems at Rackspace default to automatically applying all security updates nightly via the package unattended-upgrades. This can be changed to update all packages, or to be disabled if you wish. This is the only automatic updates method available for Ubuntu at Rackspace. Unattended-upgrades is open source, so it can also be used on systems outside of Rackspace.
+Ubuntu systems at Rackspace default to automatically applying all security updates nightly via the package unattended-upgrades. This can be changed to update all packages, or to be disabled if you wish. This is the only automatic updates method available for Ubuntu at Rackspace. unattended-upgrades is open source, and so you can also use it on any systems you have outside of Rackspace as well
 
 #### Manual Patching
 Outside of Intensive SLA's Intensive Non-Managed Patching, Rackspace does not offer regular Manual Patching.
